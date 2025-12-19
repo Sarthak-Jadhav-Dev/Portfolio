@@ -32,10 +32,11 @@ export const CustomRightClick: React.FC<CustomRightClickProps> = ({ x, y, onClos
             }}
         >
             <div className="flex flex-col space-y-0.5">
-                <ContextMenuItem label="New Folder" />
+                <ContextMenuItem label="About Me" />
                 <div className="my-1 h-px bg-white/10" />
-                <ContextMenuItem label="Get Info" />
-                <ContextMenuItem label="Change Wallpaper" />
+                <ContextMenuItem label="Visit LinkedIn" />
+                <ContextMenuItem label="Visit GitHub" />
+                <ContextMenuItem label="Visit Instagram" />
                 <div className="my-1 h-px bg-white/10" />
                 <ContextMenuItem label="Use Stacks" />
                 <ContextMenuItem label="Sort By" hasSubmenu />

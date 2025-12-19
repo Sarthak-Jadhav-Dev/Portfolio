@@ -8,14 +8,22 @@ import { cn } from "@/lib/utils";
 
 export const Dock = () => {
     const mouseX = useMotionValue(Infinity);
-    const { openApp, openApps, minimizedApps } = useDesktopStore();
+    const { openApp, closeApp, openApps, minimizedApps } = useDesktopStore();
+
+    const handleIconClick = (appId: string) => {
+        if (openApps.includes(appId)) {
+            closeApp(appId);
+        } else {
+            openApp(appId);
+        }
+    };
 
     return (
-        <div className="fixed bottom-4 left-0 right-0 z-[100] flex justify-center">
+        <div className="fixed bottom-2 md:bottom-4 left-0 right-0 z-100 flex justify-center">
             <motion.div
                 onMouseMove={(e) => mouseX.set(e.pageX)}
                 onMouseLeave={() => mouseX.set(Infinity)}
-                className="flex h-16 items-end gap-4 rounded-2xl bg-white/20 px-4 pb-3 pt-2 backdrop-blur-2xl border border-white/20 dark:bg-black/20"
+                className="flex h-16 items-end gap-2 md:gap-4 rounded-2xl bg-white/20 px-2 md:px-4 pb-3 pt-2 backdrop-blur-2xl border border-white/20 dark:bg-black/20"
             >
                 {apps.map((app) => (
                     <DockIcon
@@ -25,7 +33,7 @@ export const Dock = () => {
                         title={app.title}
                         icon={app.icon}
                         isOpen={openApps.includes(app.id)}
-                        onClick={() => openApp(app.id)}
+                        onClick={() => handleIconClick(app.id)}
                     />
                 ))}
             </motion.div>
@@ -51,7 +59,7 @@ const DockIcon = ({ mouseX, id, title, icon: Icon, isOpen, onClick }: any) => {
                 ref={ref}
                 style={{ width }}
                 onClick={onClick}
-                className="aspect-square cursor-pointer rounded-xl bg-gradient-to-br from-blue-400 to-blue-600 shadow-lg flex items-center justify-center relative hover:brightness-110 active:scale-95 transition-all text-white"
+                className="aspect-square cursor-pointer rounded-xl bg-linear-to-br from-blue-400 to-blue-600 shadow-lg flex items-center justify-center relative hover:brightness-110 active:scale-95 transition-all text-white"
             >
                 {/* For now all icons are generic blue gradients, ideally use real icons or specific colors per app */}
                 <Icon className="h-1/2 w-1/2 text-white" />

@@ -23,13 +23,16 @@ export const Window = ({ id, title, children, defaultWidth = 600, defaultHeight 
     // Initial Position Calculation
     const [isMounted, setIsMounted] = useState(false);
     const [initialPosition, setInitialPosition] = useState({ x: 100, y: 100 });
+    const [position, setPosition] = useState({ x: 100, y: 100 });
 
     useEffect(() => {
         if (typeof window !== "undefined") {
-            setInitialPosition({
+            const initialPos = {
                 x: window.innerWidth / 2 - defaultWidth / 2,
                 y: 100
-            });
+            };
+            setInitialPosition(initialPos);
+            setPosition(initialPos);
             setIsMounted(true);
         }
     }, [defaultWidth]);
@@ -58,7 +61,13 @@ export const Window = ({ id, title, children, defaultWidth = 600, defaultHeight 
             }}
             minWidth={300}
             minHeight={200}
-            bounds="window"
+            bounds="parent"
+            position={position}
+            onDragStop={(e, d) => {
+                // Prevent windows from being dragged above y=28 (TopBar height)
+                const newY = Math.max(28, d.y);
+                setPosition({ x: d.x, y: newY });
+            }}
             dragHandleClassName="window-drag-handle"
             onMouseDown={() => bringToFront(id)}
             style={{ zIndex: isFocused ? 50 : 10 }}
@@ -85,7 +94,7 @@ export const Window = ({ id, title, children, defaultWidth = 600, defaultHeight 
             >
                 {/* Title Bar - Drag Handle */}
                 <div
-                    className="window-drag-handle flex h-10 w-full shrink-0 items-center justify-between bg-gradient-to-b from-white/50 to-transparent px-4 dark:from-white/10 cursor-default"
+                    className="window-drag-handle flex h-10 w-full shrink-0 items-center justify-between bg-linear-to-b from-white/50 to-transparent px-4 dark:from-white/10 cursor-default"
                     onDoubleClick={() => toggleMinimize(id)}
                 >
                     <div className="flex items-center gap-2 group z-20" onMouseDown={(e) => e.stopPropagation()}>
