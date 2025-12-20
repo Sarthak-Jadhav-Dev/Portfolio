@@ -49,7 +49,7 @@ export const Desktop = () => {
       <Personcards />
 
       {/* Info Widget Cards - Responsive Grid */}
-      <div className="relative mt-4 mx-auto w-[90%] md:absolute md:top-56 md:left-8 md:w-auto md:mx-0 md:mt-0 flex flex-col md:flex-row gap-4 z-10">
+      <div className="relative mt-4 mx-auto w-[90%] md:absolute md:top-56 md:left-8 md:w-auto md:mx-0 md:mt-0 flex  gap-2 z-10">
         <AboutMeCard />
         <ResumeCard />
         <ProjectsCard />

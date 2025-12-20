@@ -54,7 +54,6 @@ const DockIcon = ({ mouseX, id, title, icon: Icon, isOpen, onClick }: any) => {
 
     return (
         <div className="flex flex-col items-center gap-1 group">
-            {/* Tooltip usually goes here but standard tooltip title is fine for now on hover via browser title or custom */}
             <motion.div
                 ref={ref}
                 style={{ width }}
@@ -64,6 +63,8 @@ const DockIcon = ({ mouseX, id, title, icon: Icon, isOpen, onClick }: any) => {
                 {/* For now all icons are generic blue gradients, ideally use real icons or specific colors per app */}
                 <Icon className="h-1/2 w-1/2 text-white" />
             </motion.div>
+            {/* App title text below icon */}
+            <span className="text-[10px] text-white/90 dark:text-white/90 font-medium whitespace-nowrap">{title}</span>
             <div className={cn("h-1 w-1 rounded-full bg-black/50 dark:bg-white/50", isOpen ? "opacity-100" : "opacity-0")} />
         </div>
     );

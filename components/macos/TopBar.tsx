@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { FaApple } from "react-icons/fa";
+import Link from "next/link";
+import { FaApple,FaScribd} from "react-icons/fa";
 import { IoWifi, IoBatteryCharging, IoSearch } from "react-icons/io5";
 
 export const TopBar = () => {
@@ -21,16 +22,16 @@ export const TopBar = () => {
         <div className="fixed top-0 left-0 right-0 z-110 flex h-8 w-full items-center justify-between bg-white/30 px-4 text-xs font-medium text-black backdrop-blur-md dark:bg-black/30 dark:text-white border-b border-white/10">
             <div className="flex items-center gap-4">
                 <button className="text-lg hover:opacity-70">
-                    <FaApple />
+                    <FaScribd />
                 </button>
-                <div className="hidden font-bold sm:block">Finder</div>
+                <div className="hidden font-bold sm:block">Sarthak Jadhav</div>
                 <div className="hidden gap-4 sm:flex">
-                    <button className="hover:opacity-70">File</button>
-                    <button className="hover:opacity-70">Edit</button>
-                    <button className="hover:opacity-70">View</button>
-                    <button className="hover:opacity-70">Go</button>
-                    <button className="hover:opacity-70">Window</button>
-                    <button className="hover:opacity-70">Help</button>
+                    <button className="hover:opacity-70">GitHub</button>
+                    <button className="hover:opacity-70">Instagram</button>
+                    <button className="hover:opacity-70">LinkedIn</button>
+                    <button className="hover:opacity-70">Email</button>
+                    <button className="hover:opacity-70">Resume</button>
+                    <button className="hover:opacity-70">Projects</button>
                 </div>
             </div>
 

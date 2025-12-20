@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import Link from "next/link";
 
 interface CustomRightClickProps {
     x: number;
@@ -34,15 +35,13 @@ export const CustomRightClick: React.FC<CustomRightClickProps> = ({ x, y, onClos
             <div className="flex flex-col space-y-0.5">
                 <ContextMenuItem label="About Me" />
                 <div className="my-1 h-px bg-white/10" />
-                <ContextMenuItem label="Visit LinkedIn" />
-                <ContextMenuItem label="Visit GitHub" />
-                <ContextMenuItem label="Visit Instagram" />
+                <Link href="https://www.linkedin.com/in/sarthakshahajijadhav/"><ContextMenuItem label="Visit LinkedIn" /></Link>
+                <Link href="https://github.com/Sarthak-Jadhav-Dev"><ContextMenuItem label="Visit GitHub" /></Link>
+                <Link href="https://www.instagram.com/sarthakshahajijadhav?igsh=MWo3YTZ3OHBweGprNA=="><ContextMenuItem label="Visit Instagram" /></Link>
                 <div className="my-1 h-px bg-white/10" />
-                <ContextMenuItem label="Use Stacks" />
-                <ContextMenuItem label="Sort By" hasSubmenu />
-                <ContextMenuItem label="Clean Up" disabled />
-                <ContextMenuItem label="Clean Up By" hasSubmenu disabled />
-                <ContextMenuItem label="Show View Options" />
+                <ContextMenuItem label="Projects" />
+                <ContextMenuItem label="Skills" />
+                <ContextMenuItem label="Contact" />
             </div>
         </div>
     );

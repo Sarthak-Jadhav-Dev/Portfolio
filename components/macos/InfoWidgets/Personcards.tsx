@@ -12,7 +12,7 @@ export const Personcards = () => {
             </div>
             <div>
                 <div>
-                    <h1>Personcards</h1>
+                    <Image src="/sarthakjadhav.png" alt="Sarthak Jadhav" width={200} height={200} />
                 </div>
             </div>
         </div>

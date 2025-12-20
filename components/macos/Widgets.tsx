@@ -3,8 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { IoSunny, IoCloud, IoRainy } from "react-icons/io5";
-import { IoPersonCircleOutline } from "react-icons/io5";
+import { IoPersonCircleOutline , IoBulbOutline } from "react-icons/io5";
 import { IoLogoInstagram } from "react-icons/io5";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { IoLogoGithub } from "react-icons/io5";
@@ -21,8 +20,10 @@ const WidgetContainer = ({ children, className }: { children: React.ReactNode, c
 
 export const Widgets = () => {
     const [currentTime, setCurrentTime] = useState(new Date());
+    const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
+        setMounted(true);
         const timer = setInterval(() => {
             setCurrentTime(new Date());
         }, 1000);
@@ -42,9 +43,10 @@ export const Widgets = () => {
     // Convert to 12-hour format for clock (0-11)
     const hour12 = hours % 12;
 
-    const hourRotation = (hour12 * 30) + (minutes * 0.5); // 30° per hour + 0.5° per minute
-    const minuteRotation = minutes * 6; // 6° per minute
-    const secondRotation = seconds * 6; // 6° per second
+    // Subtract 90° to adjust for CSS default orientation (0° = 3:00 position, -90° = 12:00 position)
+    const hourRotation = (hour12 * 30) + (minutes * 0.5) - 90; // 30° per hour + 0.5° per minute
+    const minuteRotation = (minutes * 6) - 90; // 6° per minute
+    const secondRotation = (seconds * 6) - 90; // 6° per second
 
     return (
         // Responsive container: stacked relative on mobile, fixed absolute on desktop
@@ -62,31 +64,47 @@ export const Widgets = () => {
                 <WidgetContainer className="w-36 h-36 bg-black/80 dark:bg-white/80 flex items-center justify-center relative overflow-hidden">
                     {/* Analog Clock Face */}
                     <div className="w-24 h-24 rounded-full border-2 border-white/30 dark:border-black/30 relative">
-                        {/* Hour Hand */}
-                        <div
-                            className="absolute top-1/2 left-1/2 w-8 h-1 bg-white dark:bg-black origin-left -translate-y-1/2 rounded-full transition-transform duration-1000"
-                            style={{ transform: `translateY(-50%) rotate(${hourRotation}deg)` }}
-                        />
-                        {/* Minute Hand */}
-                        <div
-                            className="absolute top-1/2 left-1/2 w-10 h-0.5 bg-white dark:bg-black origin-left -translate-y-1/2 rounded-full transition-transform duration-1000"
-                            style={{ transform: `translateY(-50%) rotate(${minuteRotation}deg)` }}
-                        />
-                        {/* Second Hand */}
-                        <div
-                            className="absolute top-1/2 left-1/2 w-11 h-0.5 bg-red-500 origin-left -translate-y-1/2 rounded-full transition-transform duration-200"
-                            style={{ transform: `translateY(-50%) rotate(${secondRotation}deg)` }}
-                        />
-                        {/* Center Dot */}
-                        <div className="absolute top-1/2 left-1/2 w-2 h-2 bg-red-500 rounded-full -translate-x-1/2 -translate-y-1/2" />
+                        {mounted ? (
+                            <>
+                                {/* Hour Hand */}
+                                <div
+                                    className="absolute top-1/2 left-1/2 w-8 h-1 bg-white dark:bg-black origin-left -translate-y-1/2 rounded-full transition-transform duration-1000"
+                                    style={{ transform: `translateY(-50%) rotate(${hourRotation}deg)` }}
+                                />
+                                {/* Minute Hand */}
+                                <div
+                                    className="absolute top-1/2 left-1/2 w-10 h-0.5 bg-white dark:bg-black origin-left -translate-y-1/2 rounded-full transition-transform duration-1000"
+                                    style={{ transform: `translateY(-50%) rotate(${minuteRotation}deg)` }}
+                                />
+                                {/* Second Hand */}
+                                <div
+                                    className="absolute top-1/2 left-1/2 w-11 h-0.5 bg-red-500 origin-left -translate-y-1/2 rounded-full transition-transform duration-200"
+                                    style={{ transform: `translateY(-50%) rotate(${secondRotation}deg)` }}
+                                />
+                                {/* Center Dot */}
+                                <div className="absolute top-1/2 left-1/2 w-2 h-2 bg-red-500 rounded-full -translate-x-1/2 -translate-y-1/2" />
+                            </>
+                        ) : null}
                     </div>
                 </WidgetContainer>
             </div>
 
             {/* Weather Widget - Wide */}
-            <WidgetContainer className="w-full h-40 bg-linear-to-br from-blue-400/80 to-blue-600/80 text-white pointer-events-auto relative overflow-hidden">
-                <div className="absolute top-0 right-0 p-4 opacity-20">
-                    <IoPersonCircleOutline  className="text-9xl text-white-100" />
+            <WidgetContainer className="w-full h-30 bg-linear-to-br from-stone-400/80 to-stone-900/80 text-white pointer-events-auto relative overflow-hidden">
+                <div className="absolute top-0 right-0 p-2 opacity-20">
+                    <IoBulbOutline className="text-9xl text-white-100" />
+                </div>
+                <div className="relative z-10 flex flex-col h-full justify-between">
+                    <div>
+                        <h3 className="font-semibold text-lg">Skill-Set</h3>
+                        <h2 className="text-sm">MERN Stack ,DEVOPS ,GenAI</h2>
+                    </div>
+                    
+                </div>
+            </WidgetContainer>
+            <WidgetContainer className="w-full h-30 bg-linear-to-br from-blue-400/80 to-blue-600/80 text-white pointer-events-auto relative overflow-hidden">
+                <div className="absolute top-0 right-0 p-2 opacity-20">
+                    <IoPersonCircleOutline className="text-9xl text-white-100" />
                 </div>
                 <div className="relative z-10 flex flex-col h-full justify-between">
                     <div>
@@ -100,6 +118,7 @@ export const Widgets = () => {
                     </div>
                 </div>
             </WidgetContainer>
+            
 
             {/* Battery / System Widget */}
             {/* <WidgetContainer className="w-full h-36 bg-green-500/20 border-green-500/30 backdrop-blur-xl pointer-events-auto">
