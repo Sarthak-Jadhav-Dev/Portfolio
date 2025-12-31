@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaMapMarkerAlt, FaGraduationCap, FaBriefcase } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope, FaMapMarkerAlt, FaGraduationCap, FaBriefcase } from 'react-icons/fa';
 
 export const AboutMeContent = () => {
     return (
@@ -30,20 +30,20 @@ export const AboutMeContent = () => {
                         <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Sarthak Jadhav</h1>
                         <p className="text-gray-600 dark:text-gray-400 flex items-center gap-2 mt-1">
                             <FaMapMarkerAlt className="text-sm" />
-                            India
+                            Pune, Maharahstra, India
                         </p>
                     </div>
                     <div className="flex gap-3">
-                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                        <a href="https://github.com/Sarthak-Jadhav-Dev" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
                             <FaGithub className="text-gray-700 dark:text-gray-300" />
                         </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                        <a href="https://www.linkedin.com/in/sarthakshahajijadhav/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
                             <FaLinkedin className="text-gray-700 dark:text-gray-300" />
                         </a>
-                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
-                            <FaTwitter className="text-gray-700 dark:text-gray-300" />
+                        <a href="https://www.instagram.com/sarthakshahajijadhav/?igsh=MWo3YTZ3OHBweGprNA%3D%3D#" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                            <FaInstagram className="text-gray-700 dark:text-gray-300" />
                         </a>
-                        <a href="mailto:sarthak@example.com" className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                        <a href="mailto:sarthakjadhav2006@gmail.com" className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
                             <FaEnvelope className="text-gray-700 dark:text-gray-300" />
                         </a>
                     </div>
@@ -62,7 +62,7 @@ export const AboutMeContent = () => {
                             <span className="font-semibold text-gray-900 dark:text-white">Education</span>
                         </div>
                         <p className="text-sm text-gray-600 dark:text-gray-400">
-                            B.Tech in Computer Science
+                            B.Tech in Computer Science from Vishwakarma Institute of Technology , Pune
                         </p>
                     </div>
                     <div className="p-4 rounded-xl bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800">
@@ -80,8 +80,15 @@ export const AboutMeContent = () => {
                 <div className="mt-8">
                     <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Skills</h2>
                     <div className="flex flex-wrap gap-2">
-                        {['React', 'Next.js', 'TypeScript', 'Node.js', 'Python', 'TailwindCSS', 'PostgreSQL', 'MongoDB'].map((skill) => (
+                        {['MongoDB' , 'Node.js' , 'Express.js' , 'React.js' , 'Next.js' , 'TypeScript' , 'TailwindCSS'].map((skill) => (
                             <span key={skill} className="px-3 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-sm text-gray-700 dark:text-gray-300">
+                                {skill}
+                            </span>
+                        ))}
+                    </div>
+                    <div className="flex flex-wrap gap-2 pt-1">
+                        {['Git-GitHub','Docker','Kubernetes','AWS','Jenkins'].map((skill) => (
+                            <span key={skill} className="px-3 py-1 rounded-full bg-purple-50 dark:bg-gray-800 text-sm text-gray-700 dark:text-gray-300">
                                 {skill}
                             </span>
                         ))}

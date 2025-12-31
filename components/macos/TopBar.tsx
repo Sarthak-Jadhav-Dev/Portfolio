@@ -26,10 +26,10 @@ export const TopBar = () => {
                 </button>
                 <div className="hidden font-bold sm:block">Sarthak Jadhav</div>
                 <div className="hidden gap-4 sm:flex">
-                    <button className="hover:opacity-70">GitHub</button>
-                    <button className="hover:opacity-70">Instagram</button>
-                    <button className="hover:opacity-70">LinkedIn</button>
-                    <button className="hover:opacity-70">Email</button>
+                    <Link href={"https://github.com/Sarthak-Jadhav-Dev"}><button className="hover:opacity-70">GitHub</button></Link>
+                    <Link href={"https://www.instagram.com/sarthakshahajijadhav/?igsh=MWo3YTZ3OHBweGprNA%3D%3D#"}><button className="hover:opacity-70">Instagram</button></Link>
+                    <Link href={"https://www.linkedin.com/in/sarthakshahajijadhav/"}><button className="hover:opacity-70">LinkedIn</button></Link>
+                    <Link href={"mailto:sarthakjadhav2006@gmail.com"}><button className="hover:opacity-70">Email</button></Link>
                     <button className="hover:opacity-70">Resume</button>
                     <button className="hover:opacity-70">Projects</button>
                 </div>
@@ -42,14 +42,14 @@ export const TopBar = () => {
                 <button className="hover:opacity-70">
                     <IoWifi className="text-lg" />
                 </button>
-                <button className="hover:opacity-70">
+                {/* <button className="hover:opacity-70">
                     <IoSearch className="text-lg" />
-                </button>
+                </button> */}
                 <button className="hover:opacity-70">
                     <div className="h-4 w-4 bg-transparent" /> {/* Control Center Icon placeholder */}
-                    <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+                    {/* <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
                         <path d="M7 6a1 1 0 0 1 1-1h8a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm0 6a1 1 0 0 1 1-1h8a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm1 5a1 1 0 1 0 0 2h8a1 1 0 1 0 0-2H8z" />
-                    </svg>
+                    </svg> */}
                 </button>
                 <span className="cursor-default">{time}</span>
             </div>
