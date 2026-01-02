@@ -61,11 +61,11 @@ export const Window = ({ id, title, children, defaultWidth = 600, defaultHeight 
             }}
             minWidth={300}
             minHeight={200}
-            bounds="parent"
+            bounds="window"
             position={position}
             onDragStop={(e, d) => {
-                // Prevent windows from being dragged above y=28 (TopBar height)
-                const newY = Math.max(28, d.y);
+                // Prevent windows from being dragged above y=32 (TopBar height)
+                const newY = Math.max(32, d.y);
                 setPosition({ x: d.x, y: newY });
             }}
             dragHandleClassName="window-drag-handle"

@@ -95,11 +95,14 @@ export const Widgets = () => {
                     <IoBulbOutline className="text-9xl text-white-100" />
                 </div>
                 <div className="relative z-10 flex flex-col h-full justify-between">
-                    <div>
-                        <h3 className="font-semibold text-lg">Skill-Set</h3>
-                        <h2 className="text-sm">MERN Stack ,DEVOPS ,GenAI</h2>
+                    <h2 className="text-lg font-semibold text-gray-900 dark:text-white mt-4 mb-4">Domains</h2>
+                    <div className="flex flex-wrap gap-2">
+                        {['MERN Stack' , 'DEVOPS' , 'Gen-AI'].map((domain) => (
+                            <span key={domain} className="px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-sm text-gray-700 dark:text-gray-300">
+                                {domain}
+                            </span>
+                        ))}
                     </div>
-                    
                 </div>
             </WidgetContainer>
             <WidgetContainer className="w-full h-30 bg-linear-to-br from-blue-400/80 to-blue-600/80 text-white pointer-events-auto relative overflow-hidden">
