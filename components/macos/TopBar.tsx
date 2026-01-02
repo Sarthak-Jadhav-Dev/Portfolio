@@ -21,9 +21,9 @@ export const TopBar = () => {
     return (
         <div className="fixed top-0 left-0 right-0 z-110 flex h-8 w-full items-center justify-between bg-white/30 px-4 text-xs font-medium text-black backdrop-blur-md dark:bg-black/30 dark:text-white border-b border-white/10">
             <div className="flex items-center gap-4">
-                <button className="text-lg hover:opacity-70">
+                <Link href={"/"}><button className="text-lg hover:opacity-70">
                     <FaScribd />
-                </button>
+                </button></Link>
                 <div className="hidden font-bold sm:block">Sarthak Jadhav</div>
                 <div className="hidden gap-4 sm:flex">
                     <Link href={"https://github.com/Sarthak-Jadhav-Dev"}><button className="hover:opacity-70">GitHub</button></Link>

@@ -1,4 +1,7 @@
 import React, { useEffect, useRef } from "react";
+import { AboutMeCard } from "./InfoWidgets/AboutMeCard";
+import { ProjectsCard } from "./InfoWidgets/ProjectsCard";
+import { ResumeCard } from "./InfoWidgets/ResumeCard";
 import Link from "next/link";
 
 interface CustomRightClickProps {
