@@ -16,41 +16,33 @@ interface Project {
 
 const projects: Project[] = [
     {
-        title: "Portfolio Website",
-        description: "A macOS-inspired portfolio website built with Next.js and TailwindCSS featuring draggable windows and dock animations.",
-        tags: ["Next.js", "TailwindCSS", "Framer Motion"],
-        github: "https://github.com",
-        demo: "https://example.com",
-        stars: 42,
-        forks: 12,
+        title: "AI-Teams",
+        description: "A distributed multi-agent research swarm powered by LangGraph and Google Gemini. Validates, decomposes, and executes complex research queries using a hierarchical team of autonomous AI agents. Automated research team orchestration using LangGraph and Google Gemini",
+        tags: ["LangGraph", "LangChain", "Python"],
+        github: "https://github.com/Sarthak-Jadhav-Dev/AI-Team",
         gradient: "from-blue-500 to-purple-600"
     },
     {
-        title: "E-Commerce Platform",
-        description: "Full-stack e-commerce solution with payment integration, inventory management, and real-time order tracking.",
-        tags: ["React", "Node.js", "MongoDB", "Stripe"],
-        github: "https://github.com",
-        stars: 28,
-        forks: 8,
+        title: "KYC-AML",
+        description: "KYC & AML Compliance Orchestrator A powerful low-code engine to visually design and deploy compliance workflows. Features real-time Transaction Monitoring (TM), KYC identity verification, and AML screening nodes using Next.js, React Flow, and TypeScript.",
+        tags: ["React", "Node.js", "MongoDB", "Docker","TypeScript","Next.js"],
+        github: "https://github.com/Sarthak-Jadhav-Dev/KYC-AML",
         gradient: "from-green-500 to-emerald-600"
     },
     {
-        title: "Chat Application",
-        description: "Real-time messaging app with WebSocket support, file sharing, and end-to-end encryption.",
-        tags: ["TypeScript", "Socket.io", "PostgreSQL"],
-        github: "https://github.com",
-        demo: "https://example.com",
-        stars: 35,
-        forks: 15,
+        title: "Cubestry",
+        description: "Cubestry is an open-source web application designed to help users and developers test, compare, and understand different AI models side-by-side. By providing a unified interface for multiple LLM providers, Cubestry allows you to battle-test prompts and models to find the perfect fit for your specific needs.",
+        tags: ["React", "Node.js", "MongoDB","TypeScript","Next.js"],
+        github: "https://github.com/Sarthak-Jadhav-Dev/Cubestry",
+        demo: "https://cubestry.vercel.app",
         gradient: "from-pink-500 to-rose-600"
     },
     {
-        title: "Task Management Tool",
-        description: "Collaborative project management tool with drag-and-drop boards, deadlines, and team collaboration features.",
-        tags: ["Vue.js", "Firebase", "Vuetify"],
-        github: "https://github.com",
-        stars: 19,
-        forks: 5,
+        title: "Freelance Website for Kids Trans EduTech Pvt.Ltd",
+        description: "A modern and responsive website for Kids Trans EduTech Pvt.Ltd, a company that provides educational services to children.",
+        tags: ["React", "Node.js", "MongoDB"],
+        github: "https://github.com/Sarthak-Jadhav-Dev/KidsTransEduTech",
+        demo: "https://kidstransedutech.com",
         gradient: "from-orange-500 to-amber-600"
     },
 ];
