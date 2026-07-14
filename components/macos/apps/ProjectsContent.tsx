@@ -23,26 +23,19 @@ const projects: Project[] = [
         gradient: "from-blue-500 to-purple-600"
     },
     {
-        title: "OpenRouter-BackendClone",
-        description: "An Open Source Version of OpenRouter's Backend , to learn OpenRouter covers all LLM API's under one single API Layer , and Track all Usage and Data regarding to it",
-        tags: ["Node.js", "Supabase", "Express"],
-        github: "https://github.com/Sarthak-Jadhav-Dev/OpenRouter-BackendClone",
+        title: "Inspectra",
+        description: "An AI-powered agentic coding assistant that runs directly in your terminal or via Telegram. Point it at any codebase, give it a goal, and it will reason, read files, search the codebase, write code, and apply changes — all with your approval before anything is committed to disk. Think of it as an autonomous developer that lives inside your project, accessible 24/7 from your phone via Telegram.",
+        tags: ["TypeScript", "Bun", "OpenRouter", "Vercel AI SDK", "Telegraf"],
+        github: "https://github.com/Sarthak-Jadhav-Dev/Inspectra",
         gradient: "from-green-500 to-emerald-600"
     },
     {
-        title: "Cubestry",
-        description: "Cubestry is an open-source web application designed to help users and developers test, compare, and understand different AI models side-by-side. By providing a unified interface for multiple LLM providers, Cubestry allows you to battle-test prompts and models to find the perfect fit for your specific needs.",
-        tags: ["React", "Node.js", "MongoDB","TypeScript","Next.js"],
-        github: "https://github.com/Sarthak-Jadhav-Dev/Cubestry",
-        demo: "https://cubestry.vercel.app",
-        gradient: "from-pink-500 to-rose-600"
-    },
-    {
         title: "Plotoris",
-        description: "Plotoris is an advanced AI-powered SaaS platform designed for cutting-edge digital research and multi-agent workflows. Blending a stunning graphic interface with powerful AI capabilities, Plotoris redefines how users manage, discover, and collaborate with AI models.",
-        tags: ["React", "Express", "Supabase","TypeScript","Next.js","LangChain","LangGraph"],
+        description: "An advanced AI-powered SaaS platform designed for cutting-edge digital research and multi-agent workflows. Blending a stunning graphic interface with powerful AI capabilities, Plotoris redefines how users manage, discover, and collaborate with AI models.",
+        tags: ["Next.js", "React", "TypeScript", "Express.js", "Supabase", "LangChain", "LangGraph"],
         github: "https://github.com/Sarthak-Jadhav-Dev/-PLOTORIS-",
-        gradient: "from-orange-500 to-amber-600"
+        demo: "https://plotoris.vercel.app",
+        gradient: "from-pink-500 to-rose-600"
     },
 ];
 
