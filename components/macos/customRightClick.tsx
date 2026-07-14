@@ -1,7 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import { AboutMeCard } from "./InfoWidgets/AboutMeCard";
-import { ProjectsCard } from "./InfoWidgets/ProjectsCard";
-import { ResumeCard } from "./InfoWidgets/ResumeCard";
 import Link from "next/link";
 
 interface CustomRightClickProps {
@@ -42,9 +39,7 @@ export const CustomRightClick: React.FC<CustomRightClickProps> = ({ x, y, onClos
                 <Link href="https://github.com/Sarthak-Jadhav-Dev"><ContextMenuItem label="Visit GitHub" /></Link>
                 <Link href="https://www.instagram.com/sarthakshahajijadhav?igsh=MWo3YTZ3OHBweGprNA=="><ContextMenuItem label="Visit Instagram" /></Link>
                 <div className="my-1 h-px bg-white/10" />
-                <ContextMenuItem label="Projects" />
-                <ContextMenuItem label="Skills" />
-                <ContextMenuItem label="Contact" />
+            
             </div>
         </div>
     );

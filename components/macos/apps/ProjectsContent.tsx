@@ -23,10 +23,10 @@ const projects: Project[] = [
         gradient: "from-blue-500 to-purple-600"
     },
     {
-        title: "KYC-AML",
-        description: "KYC & AML Compliance Orchestrator A powerful low-code engine to visually design and deploy compliance workflows. Features real-time Transaction Monitoring (TM), KYC identity verification, and AML screening nodes using Next.js, React Flow, and TypeScript.",
-        tags: ["React", "Node.js", "MongoDB", "Docker","TypeScript","Next.js"],
-        github: "https://github.com/Sarthak-Jadhav-Dev/KYC-AML",
+        title: "OpenRouter-BackendClone",
+        description: "An Open Source Version of OpenRouter's Backend , to learn OpenRouter covers all LLM API's under one single API Layer , and Track all Usage and Data regarding to it",
+        tags: ["Node.js", "Supabase", "Express"],
+        github: "https://github.com/Sarthak-Jadhav-Dev/OpenRouter-BackendClone",
         gradient: "from-green-500 to-emerald-600"
     },
     {
@@ -38,11 +38,10 @@ const projects: Project[] = [
         gradient: "from-pink-500 to-rose-600"
     },
     {
-        title: "Freelance Website for Kids Trans EduTech Pvt.Ltd",
-        description: "A modern and responsive website for Kids Trans EduTech Pvt.Ltd, a company that provides educational services to children.",
-        tags: ["React", "Node.js", "MongoDB"],
-        github: "https://github.com/Sarthak-Jadhav-Dev/KidsTransEduTech",
-        demo: "https://kidstransedutech.com",
+        title: "Plotoris",
+        description: "Plotoris is an advanced AI-powered SaaS platform designed for cutting-edge digital research and multi-agent workflows. Blending a stunning graphic interface with powerful AI capabilities, Plotoris redefines how users manage, discover, and collaborate with AI models.",
+        tags: ["React", "Express", "Supabase","TypeScript","Next.js","LangChain","LangGraph"],
+        github: "https://github.com/Sarthak-Jadhav-Dev/-PLOTORIS-",
         gradient: "from-orange-500 to-amber-600"
     },
 ];
